@@ -3,7 +3,7 @@ name: Run Mabl test on push
 on:
   push:
     branches:
-      - main  # or your working branch
+      - main
 
 jobs:
   run-mabl:
@@ -11,9 +11,9 @@ jobs:
     steps:
       - name: Trigger Mabl test
         uses: mablhq/github-run-tests-action@v1
+        env:
+          MABL_API_KEY: Ynpe42KQAgIZalf4oz3Nfw  # Replace with your real key
         with:
-          mabl-api-key: Ynpe42KQAgIZalf4oz3Nfw
           environment-id: GUleDcVXvAtpeKE5DHRgBA-e
           application-id: F9Dk1lHxAIBYIhDMj3zrYQ-a
           plan-id: RSY1O0JFkUKHmyKRHdN5tA-p
-# Trigger fresh run
